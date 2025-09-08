@@ -1,41 +1,52 @@
-# Dependencies
+# === Dependencies ===
 node_modules
 .pnp
 .pnp.js
 
-# Build output
-.next
-out
-build
+# === Build output ===
+/.next
+/out
+/build
+/.turbo
 
-# Production
+# === Logs ===
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Testing
+# === Testing ===
 /coverage
 
-# Local env files
+# === Env files ===
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Mac / Linux / Windows system files
+# === System files ===
 .DS_Store
 Thumbs.db
 
-# IDE settings
+# === IDE settings ===
 .vscode/*
 !.vscode/extensions.json
 .idea
 *.swp
 
-# TypeScript
+# === TypeScript ===
 *.tsbuildinfo
 next-env.d.ts
 
-# Misc
+# === Package managers ===
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# === Deployment ===
+.vercel
+
+# === Misc ===
 *.pem
