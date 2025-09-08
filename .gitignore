@@ -1,13 +1,12 @@
 # === Dependencies ===
-node_modules
-.pnp
-.pnp.js
 
-# === Build output ===
+
+/node_modules
 /.next
 /out
 /build
 /.turbo
+/.vercel
 
 # === Logs ===
 *.log
