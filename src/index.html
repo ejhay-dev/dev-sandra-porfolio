@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandra Demition - Creative Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="loading-logo-bg">SD</div>
+            </div>
+            <div class="loading-text">
+                <span class="code">Initializing Sandra Demition Portfolio...</span>
+            </div>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="main-app" class="main-app hidden">
+        <!-- Matrix Rain Background -->
+        <canvas id="matrix-canvas" class="matrix-canvas"></canvas>
+
+        <!-- Top Navigation Bar -->
+        <div class="top-nav">
+            <!-- Logo/Brand -->
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="text-white font-bold text-sm">SD</span>
+                </div>
+                <div class="brand-text hidden sm:flex">
+                    <span class="code text-xs text-cyan-400">~/sandra-demition</span>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <div class="nav-tabs-container">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-tab="home">
+                        <span class="nav-tab-icon">🏠</span>
+                        <span class="nav-tab-label">Home</span>
+                    </button>
+                    <button class="nav-tab" data-tab="about">
+                        <span class="nav-tab-icon">👤</span>
+                        <span class="nav-tab-label">About</span>
+                    </button>
+                    <button class="nav-tab" data-tab="services">
+                        <span class="nav-tab-icon">⚙️</span>
+                        <span class="nav-tab-label">Services</span>
+                    </button>
+                    <button class="nav-tab" data-tab="portfolio">
+                        <span class="nav-tab-icon">💼</span>
+                        <span class="nav-tab-label">Portfolio</span>
+                    </button>
+                    <button class="nav-tab" data-tab="certificates">
+                        <span class="nav-tab-icon">🏆</span>
+                        <span class="nav-tab-label">Certificates</span>
+                    </button>
+                    <button class="nav-tab" data-tab="contact">
+                        <span class="nav-tab-icon">📧</span>
+                        <span class="nav-tab-label">Contact</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Status -->
+            <div class="status-indicator status-online">
+                <div class="status-dot"></div>
+                <span class="status-text">Available</span>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Background Elements -->
+            <div class="background-elements">
+                <div class="bg-text-large">SD</div>
+                <div class="bg-text-rotate-1">SANDRA DEMITION</div>
+                <div class="bg-text-rotate-2">CREATIVE DEVELOPER</div>
+            </div>
+
+            <!-- Home Section -->
+            <div id="home-section" class="content-section active">
+                <div class="hero-section">
+                    <!-- Animated Background Effects -->
+                    <div class="animated-bg">
+                        <div class="bg-gradient-1"></div>
+                        <div class="bg-gradient-2"></div>
+                        <div class="floating-shape-1"></div>
+                        <div class="floating-shape-2"></div>
+                    </div>
+
+                    <div class="hero-content">
+                        <!-- Terminal Header -->
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <div class="window-controls">
+                                    <div class="window-control close"></div>
+                                    <div class="window-control minimize"></div>
+                                    <div class="window-control maximize"></div>
+                                </div>
+                                <div class="terminal-title">
+                                    <span class="code text-xs text-cyan-400">~/sandra-demition</span>
+                                </div>
+                                <div class="terminal-spacer"></div>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-content">
+                                    <div class="terminal-line">
+                                        <span class="text-cyan-400">$</span>
+                                        <span class="text-white">whoami</span>
+                                    </div>
+                                    <div class="terminal-output">
+                                        <span id="typing-name" class="text-cyan-300"></span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="text-cyan-400">$</span>
+                                        <span class="text-white">introduction</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Hero Content -->
+                        <div class="hero-main">
+                            <div class="hero-section-label">
+                                <span class="code text-sm uppercase tracking-wider text-cyan-400">HOME</span>
+                            </div>
+                            
+                            <div class="hero-title">
+                                <h1 id="typing-title" class="teal-text-primary font-bold"></h1>
+                                <div class="hero-subtitle">
+                                    a <span class="teal-text-accent">creative developer</span>
+                                </div>
+                            </div>
+                            
+                            <p class="hero-description">
+                                I bring value to web development projects by merging technical expertise 
+                                with creativity and aesthetics. Specializing in video editing, social media 
+                                strategy, and modern web experiences.
+                            </p>
+
+                            <div class="hero-status">
+                                <div class="status-indicator status-online">
+                                    <div class="status-dot"></div>
+                                    Available for projects
+                                </div>
+                            </div>
+
+                            <!-- Skills Grid -->
+                            <div class="skills-grid">
+                                <div class="skill-card teal">
+                                    <div class="skill-header">
+                                        <div class="skill-dot bg-teal-400"></div>
+                                        <span class="code text-sm text-teal-400">video_editing</span>
+                                    </div>
+                                    <p class="skill-description">Professional video content creation and post-production</p>
+                                </div>
+                                <div class="skill-card cyan">
+                                    <div class="skill-header">
+                                        <div class="skill-dot bg-cyan-400"></div>
+                                        <span class="code text-sm text-cyan-400">social_media</span>
+                                    </div>
+                                    <p class="skill-description">Strategic social media management and content strategy</p>
+                                </div>
+                                <div class="skill-card blue">
+                                    <div class="skill-header">
+                                        <div class="skill-dot bg-blue-400"></div>
+                                        <span class="code text-sm text-blue-400">web_design</span>
+                                    </div>
+                                    <p class="skill-description">Modern web design and user experience optimization</p>
+                                </div>
+                                <div class="skill-card emerald">
+                                    <div class="skill-header">
+                                        <div class="skill-dot bg-emerald-400"></div>
+                                        <span class="code text-sm text-emerald-400">visual_scripts</span>
+                                    </div>
+                                    <p class="skill-description">Creative visual storytelling and script development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div id="about-section" class="content-section">
+                <div class="about-container">
+                    <div class="dev-window">
+                        <div class="window-titlebar">
+                            <div class="window-controls">
+                                <div class="window-control close"></div>
+                                <div class="window-control minimize"></div>
+                                <div class="window-control maximize"></div>
+                            </div>
+                            <div class="window-title">
+                                <span class="code text-xs text-muted">About.md</span>
+                            </div>
+                            <div class="window-spacer"></div>
+                        </div>
+                        
+                        <div class="about-content">
+                            <div class="code-comment">
+                                <span class="syntax-comment">// Personal Story</span>
+                            </div>
+                            
+                            <h2 class="teal-text-primary">About Sandra</h2>
+                            
+                            <div class="about-text">
+                                <p>
+                                    <span class="teal-text-primary">Hi, I'm Sandra!</span> I'm a creative professional with a background in 
+                                    <span class="teal-text-accent">video editing</span>, <span class="teal-text-accent">social media management</span>, 
+                                    and <span class="teal-text-accent">web content design</span>. Over the past few years, I've worked with different 
+                                    brands and agencies across <span class="text-cyan-300">Canada, the US, and Australia</span>, helping them grow their 
+                                    presence online through engaging visuals, campaigns, and storytelling.
+                                </p>
+                                
+                                <p>
+                                    I'm the type of person who enjoys both the <span class="teal-text-accent">creative and technical sides</span> of digital work. 
+                                    Whether it's editing podcasts and videos, designing a Shopify page, or running social media campaigns, I like bringing 
+                                    ideas to life and making content that people connect with.
+                                </p>
+                                
+                                <p>
+                                    I'd say my strengths are being <span class="text-cyan-300">resourceful</span>, <span class="text-cyan-300">adaptable</span>, 
+                                    and <span class="text-cyan-300">always curious</span>. I love learning new tools and trends that make content stand out. 
+                                    At the end of the day, I just enjoy creating things that make an impact, whether it's for a brand, a business, or a community.
+                                </p>
+                            </div>
+                            
+                            <div class="skills-list">
+                                <h3 class="text-white">What I Do Best</h3>
+                                <ul>
+                                    <li><span class="skill-bullet bg-teal-400"></span>Video and podcast editing</li>
+                                    <li><span class="skill-bullet bg-cyan-400"></span>Social media campaigns and management</li>
+                                    <li><span class="skill-bullet bg-blue-400"></span>Web content design (Shopify, landing pages)</li>
+                                    <li><span class="skill-bullet bg-emerald-400"></span>Visual storytelling and brand campaigns</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="about-badges">
+                                <span class="dev-badge badge-primary">Resourceful</span>
+                                <span class="dev-badge badge-cyan">Adaptable</span>
+                                <span class="dev-badge badge-orange">Curious</span>
+                                <span class="dev-badge badge-emerald">Impact-Driven</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <div id="services-section" class="content-section">
+                <div class="services-container">
+                    <div class="section-header">
+                        <h2 class="teal-text-primary">Services</h2>
+                        <p class="text-muted">Professional creative services that drive results and exceed expectations.</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card teal-glow">
+                            <div class="service-icon bg-teal-500/10">
+                                <span class="text-3xl">🎬</span>
+                            </div>
+                            <h4>Video Editing</h4>
+                            <p class="text-sm text-muted">Professional video content creation and post-production</p>
+                        </div>
+                        <div class="service-card cyan-glow">
+                            <div class="service-icon bg-cyan-500/10">
+                                <span class="text-3xl">📱</span>
+                            </div>
+                            <h4>Social Media</h4>
+                            <p class="text-sm text-muted">Strategic social media management and content strategy</p>
+                        </div>
+                        <div class="service-card blue-glow">
+                            <div class="service-icon bg-blue-500/10">
+                                <span class="text-3xl">💻</span>
+                            </div>
+                            <h4>Web Design</h4>
+                            <p class="text-sm text-muted">Modern web design and user experience optimization</p>
+                        </div>
+                        <div class="service-card emerald-glow">
+                            <div class="service-icon bg-emerald-500/10">
+                                <span class="text-3xl">📝</span>
+                            </div>
+                            <h4>Visual Scripts</h4>
+                            <p class="text-sm text-muted">Creative visual storytelling and script development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div id="portfolio-section" class="content-section">
+                <div class="portfolio-container">
+                    <div class="section-header">
+                        <h2 class="teal-text-primary">Featured Work</h2>
+                        <p class="text-muted">A collection of projects showcasing expertise across multiple creative disciplines.</p>
+                    </div>
+
+                    <div class="portfolio-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=400&h=300&fit=crop&crop=entropy&auto=format" alt="Brand Documentary">
+                                <div class="project-overlay"></div>
+                                <div class="project-badges">
+                                    <span class="dev-badge badge-primary">Featured</span>
+                                    <span class="code-badge">Video Editing</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Brand Documentary</h3>
+                                <p class="text-muted">A comprehensive brand documentary showcasing cutting-edge product innovation through dynamic visual effects and cinematic storytelling.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">After Effects</span>
+                                    <span class="tech-tag">Premiere Pro</span>
+                                    <span class="tech-tag">Color Grading</span>
+                                </div>
+                                <button class="dev-button">View Project</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop&crop=entropy&auto=format" alt="E-commerce Platform">
+                                <div class="project-overlay"></div>
+                                <div class="project-badges">
+                                    <span class="dev-badge badge-cyan">Live</span>
+                                    <span class="code-badge">Web Design</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>E-commerce Platform</h3>
+                                <p class="text-muted">Next-generation e-commerce platform with immersive 3D interactions, AI product previews, and seamless user experience design.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">3D Design</span>
+                                    <span class="tech-tag">UX/UI</span>
+                                </div>
+                                <button class="dev-button">View Project</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop&crop=entropy&auto=format" alt="Viral Campaign">
+                                <div class="project-overlay"></div>
+                                <div class="project-badges">
+                                    <span class="dev-badge badge-orange">Trending</span>
+                                    <span class="code-badge">Social Media</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Viral Campaign</h3>
+                                <p class="text-muted">Revolutionary social media campaign that broke engagement records and redefined innovative storytelling techniques.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Content Strategy</span>
+                                    <span class="tech-tag">Analytics</span>
+                                    <span class="tech-tag">Creative Direction</span>
+                                </div>
+                                <button class="dev-button">View Project</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop&crop=entropy&auto=format" alt="Corporate Identity">
+                                <div class="project-overlay"></div>
+                                <div class="project-badges">
+                                    <span class="dev-badge badge-blue">Completed</span>
+                                    <span class="code-badge">Visual Design</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Corporate Identity</h3>
+                                <p class="text-muted">Complete corporate identity redesign with modern branding elements and comprehensive visual guideline development.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Brand Design</span>
+                                    <span class="tech-tag">Logo Design</span>
+                                    <span class="tech-tag">Style Guide</span>
+                                </div>
+                                <button class="dev-button">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificates Section -->
+            <div id="certificates-section" class="content-section">
+                <div class="certificates-container">
+                    <div class="section-header">
+                        <h2 class="teal-text-primary">🏆 Professional Certificates</h2>
+                        <p class="text-muted">Google Professional Certificates demonstrating expertise in digital marketing, UX design, and project management.</p>
+                    </div>
+
+                    <div class="certificates-grid">
+                        <div class="certificate-card">
+                            <div class="certificate-window">
+                                <div class="window-controls">
+                                    <div class="window-control close"></div>
+                                    <div class="window-control minimize"></div>
+                                    <div class="window-control maximize"></div>
+                                </div>
+                                <div class="certificate-filename">
+                                    <span class="code text-xs text-cyan-400">digital_marketing_certificate.pdf</span>
+                                </div>
+                                <div class="window-spacer"></div>
+                            </div>
+                            
+                            <div class="certificate-image">
+                                <!-- Replace with your certificate image path -->
+                                <img src="certificates/digital-marketing-cert.png" alt="Digital Marketing Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="certificate-placeholder">
+                                    <div class="placeholder-icon">🏆</div>
+                                    <div class="placeholder-text">
+                                        <div class="certificate-provider">Google</div>
+                                        <div class="certificate-category">Digital Marketing</div>
+                                        <div class="certificate-date">Jun 8, 2020</div>
+                                    </div>
+                                </div>
+                                <div class="certificate-overlay"></div>
+                                <div class="certificate-badges">
+                                    <span class="dev-badge badge-primary">✅ Google Verified</span>
+                                    <span class="code-badge">Coursera • 2020</span>
+                                    <span class="category-badge">🎓 Digital Marketing</span>
+                                </div>
+                            </div>
+
+                            <div class="certificate-content">
+                                <div class="certificate-header">
+                                    <span class="dev-badge badge-primary">🏆 Digital Marketing</span>
+                                </div>
+                                <h3 class="teal-text-primary">Foundations of Digital Marketing and E-commerce</h3>
+                                <p class="text-muted">Comprehensive program covering e-commerce fundamentals, digital advertising, analytics, and marketing strategy.</p>
+                                <div class="certificate-skills">
+                                    <span class="skill-tag">Google Ads</span>
+                                    <span class="skill-tag">Social Media Marketing</span>
+                                    <span class="skill-tag cyan">+2 more</span>
+                                </div>
+                                <div class="certificate-details">
+                                    <div class="detail-item"><span class="detail-dot bg-cyan-400"></span>Issued by Google</div>
+                                    <div class="detail-item"><span class="detail-dot bg-teal-400"></span>Completed on Coursera</div>
+                                    <div class="detail-item"><span class="detail-dot bg-emerald-400"></span>Certified Jun 8, 2020</div>
+                                    <div class="detail-item"><span class="detail-dot bg-blue-400"></span>Professional Development</div>
+                                </div>
+                                <button class="dev-button certificate-button" onclick="window.open('https://coursera.org/verify/professional-cert/KCJVXTNKUAKL', '_blank')">
+                                    🔗 View Certificate
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="certificate-card">
+                            <div class="certificate-window">
+                                <div class="window-controls">
+                                    <div class="window-control close"></div>
+                                    <div class="window-control minimize"></div>
+                                    <div class="window-control maximize"></div>
+                                </div>
+                                <div class="certificate-filename">
+                                    <span class="code text-xs text-cyan-400">ux_design_certificate.pdf</span>
+                                </div>
+                                <div class="window-spacer"></div>
+                            </div>
+                            
+                            <div class="certificate-image">
+                                <!-- Replace with your certificate image path -->
+                                <img src="certificates/ux-design-cert.png" alt="UX Design Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="certificate-placeholder">
+                                    <div class="placeholder-icon">🏆</div>
+                                    <div class="placeholder-text">
+                                        <div class="certificate-provider">Google</div>
+                                        <div class="certificate-category">UX Design</div>
+                                        <div class="certificate-date">Jun 16, 2020</div>
+                                    </div>
+                                </div>
+                                <div class="certificate-overlay"></div>
+                                <div class="certificate-badges">
+                                    <span class="dev-badge badge-cyan">✅ Google Verified</span>
+                                    <span class="code-badge">Coursera • 2020</span>
+                                    <span class="category-badge">🎓 UX Design</span>
+                                </div>
+                            </div>
+
+                            <div class="certificate-content">
+                                <div class="certificate-header">
+                                    <span class="dev-badge badge-cyan">🏆 UX Design</span>
+                                </div>
+                                <h3 class="teal-text-primary">Foundations of User Experience (UX) Design</h3>
+                                <p class="text-muted">In-depth training in user research, design thinking, wireframing, prototyping, and usability testing.</p>
+                                <div class="certificate-skills">
+                                    <span class="skill-tag">User Research</span>
+                                    <span class="skill-tag">Wireframing</span>
+                                    <span class="skill-tag cyan">+2 more</span>
+                                </div>
+                                <div class="certificate-details">
+                                    <div class="detail-item"><span class="detail-dot bg-cyan-400"></span>Issued by Google</div>
+                                    <div class="detail-item"><span class="detail-dot bg-teal-400"></span>Completed on Coursera</div>
+                                    <div class="detail-item"><span class="detail-dot bg-emerald-400"></span>Certified Jun 16, 2020</div>
+                                    <div class="detail-item"><span class="detail-dot bg-blue-400"></span>Professional Development</div>
+                                </div>
+                                <button class="dev-button certificate-button" onclick="window.open('https://coursera.org/verify/professional-cert/B3QZLT9FAWKE', '_blank')">
+                                    🔗 View Certificate
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="certificate-card">
+                            <div class="certificate-window">
+                                <div class="window-controls">
+                                    <div class="window-control close"></div>
+                                    <div class="window-control minimize"></div>
+                                    <div class="window-control maximize"></div>
+                                </div>
+                                <div class="certificate-filename">
+                                    <span class="code text-xs text-cyan-400">project_management_certificate.pdf</span>
+                                </div>
+                                <div class="window-spacer"></div>
+                            </div>
+                            
+                            <div class="certificate-image">
+                                <!-- Replace with your certificate image path -->
+                                <img src="certificates/project-management-cert.png" alt="Project Management Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="certificate-placeholder">
+                                    <div class="placeholder-icon">🏆</div>
+                                    <div class="placeholder-text">
+                                        <div class="certificate-provider">Google</div>
+                                        <div class="certificate-category">Project Management</div>
+                                        <div class="certificate-date">Jun 10, 2020</div>
+                                    </div>
+                                </div>
+                                <div class="certificate-overlay"></div>
+                                <div class="certificate-badges">
+                                    <span class="dev-badge badge-blue">✅ Google Verified</span>
+                                    <span class="code-badge">Coursera • 2020</span>
+                                    <span class="category-badge">🎓 Project Management</span>
+                                </div>
+                            </div>
+
+                            <div class="certificate-content">
+                                <div class="certificate-header">
+                                    <span class="dev-badge badge-blue">🏆 Project Management</span>
+                                </div>
+                                <h3 class="teal-text-primary">Foundations of Project Management</h3>
+                                <p class="text-muted">Professional training in project lifecycle, stakeholder management, Agile methodology, and team leadership.</p>
+                                <div class="certificate-skills">
+                                    <span class="skill-tag">Agile Methodology</span>
+                                    <span class="skill-tag">Stakeholder Management</span>
+                                    <span class="skill-tag cyan">+2 more</span>
+                                </div>
+                                <div class="certificate-details">
+                                    <div class="detail-item"><span class="detail-dot bg-cyan-400"></span>Issued by Google</div>
+                                    <div class="detail-item"><span class="detail-dot bg-teal-400"></span>Completed on Coursera</div>
+                                    <div class="detail-item"><span class="detail-dot bg-emerald-400"></span>Certified Jun 10, 2020</div>
+                                    <div class="detail-item"><span class="detail-dot bg-blue-400"></span>Professional Development</div>
+                                </div>
+                                <button class="dev-button certificate-button" onclick="window.open('https://coursera.org/verify/professional-cert/KJFHC9NDKVLE', '_blank')">
+                                    🔗 View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Summary -->
+                    <div class="professional-summary">
+                        <div class="dev-window">
+                            <div class="window-titlebar">
+                                <div class="window-controls">
+                                    <div class="window-control close"></div>
+                                    <div class="window-control minimize"></div>
+                                    <div class="window-control maximize"></div>
+                                </div>
+                                <div class="window-title">
+                                    <span class="code text-xs text-muted">professional-credentials.json</span>
+                                </div>
+                                <div class="window-spacer"></div>
+                            </div>
+                            
+                            <div class="summary-grid">
+                                <div class="code-block">
+                                    <div class="syntax-comment">// Professional Certifications</div>
+                                    <div class="code-lines">
+                                        <div><span class="syntax-keyword">total_certificates</span>: <span class="syntax-number">3</span></div>
+                                        <div><span class="syntax-keyword">certification_provider</span>: <span class="syntax-string">"Google Career Certificates"</span></div>
+                                        <div><span class="syntax-keyword">platform</span>: <span class="syntax-string">"Coursera"</span></div>
+                                        <div><span class="syntax-keyword">completion_year</span>: <span class="syntax-number">2020</span></div>
+                                        <div><span class="syntax-keyword">status</span>: <span class="syntax-string">"verified"</span></div>
+                                        <div><span class="syntax-keyword">professional_development</span>: <span class="syntax-string">"ongoing"</span></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="code-block">
+                                    <div class="syntax-comment">// Core Competencies</div>
+                                    <div class="code-lines">
+                                        <div><span class="syntax-keyword">digital_marketing</span>: <span class="syntax-string">"E-commerce & Analytics"</span></div>
+                                        <div><span class="syntax-keyword">user_experience</span>: <span class="syntax-string">"Design & Research"</span></div>
+                                        <div><span class="syntax-keyword">project_management</span>: <span class="syntax-string">"Agile & Scrum"</span></div>
+                                        <div><span class="syntax-keyword">industry_ready</span>: <span class="syntax-string">true</span></div>
+                                        <div><span class="syntax-keyword">career_advancement</span>: <span class="syntax-string">"enterprise_level"</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="summary-badges">
+                                <span class="dev-badge badge-primary text-xs">📊 Digital Marketing Expert</span>
+                                <span class="dev-badge badge-cyan text-xs">🎨 UX Design Professional</span>
+                                <span class="dev-badge badge-blue text-xs">📋 Project Management Certified</span>
+                                <span class="dev-badge badge-emerald text-xs">⭐ Google Career Qualified</span>
+                            </div>
+                            
+                            <div class="summary-description">
+                                <p class="text-muted">
+                                    All certificates are verified through Google Career Certificates program and demonstrate 
+                                    industry-ready skills for professional roles in digital marketing, UX design, and project management.
+                                    Each certificate represents comprehensive training and hands-on project experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contact-section" class="content-section">
+                <div class="contact-container">
+                    <div class="dev-window">
+                        <div class="window-titlebar">
+                            <div class="window-controls">
+                                <div class="window-control close"></div>
+                                <div class="window-control minimize"></div>
+                                <div class="window-control maximize"></div>
+                            </div>
+                            <div class="window-title">
+                                <span class="code text-xs text-muted">Contact.json</span>
+                            </div>
+                            <div class="window-spacer"></div>
+                        </div>
+                        
+                        <div class="contact-content">
+                            <div class="contact-header">
+                                <h2 class="teal-text-primary">Let's Connect</h2>
+                                <p class="text-muted">Got an idea in mind? Let's chat about your project and turn it into something amazing together.</p>
+                            </div>
+
+                            <div class="contact-info">
+                                <div class="code-block contact-code">
+                                    <div class="syntax-comment">// Contact Information</div>
+                                    <div class="code-lines">
+                                        <div><span class="syntax-keyword">email</span>: <span class="syntax-string">"sandrademition@gmail.com"</span></div>
+                                        <div><span class="syntax-keyword">linkedin</span>: <span class="syntax-string">"/in/sandra-demition"</span></div>
+                                        <div><span class="syntax-keyword">status</span>: <span class="syntax-string">"available"</span></div>
+                                        <div><span class="syntax-keyword">response_time</span>: <span class="syntax-string">"24h"</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-buttons">
+                                <button class="dev-button contact-btn" onclick="window.open('mailto:sandrademition@gmail.com', '_blank')">
+                                    📧 Send Email
+                                </button>
+                                <button class="dev-button contact-btn" onclick="window.open('https://www.linkedin.com/in/sandra-demition-8a455b114', '_blank')">
+                                    💼 LinkedIn
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
