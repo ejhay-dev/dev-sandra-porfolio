@@ -1,12 +1,12 @@
 # Dependencies
-/node_modules
-/.pnp
+node_modules
+.pnp
 .pnp.js
 
 # Build output
-/.next
-/out
-/build
+.next
+out
+build
 
 # Production
 *.log
